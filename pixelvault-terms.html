@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090612">
+  <meta name="description" content="PixelVault Terms of Service">
+  <title>PixelVault — Terms of Service</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090612;
+      --panel: rgba(22, 15, 39, .86);
+      --panel-border: rgba(190, 153, 255, .2);
+      --text: #f5f0ff;
+      --muted: #b8accd;
+      --purple: #b78cff;
+      --purple-bright: #d3b5ff;
+      --line: rgba(206, 183, 255, .14);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 15% 5%, rgba(104, 48, 180, .24), transparent 42%),
+        radial-gradient(ellipse at 90% 30%, rgba(56, 50, 143, .19), transparent 40%),
+        linear-gradient(180deg, #090612, #0c0818 60%, #08050f);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    .stars, .stars::before, .stars::after {
+      position: fixed; inset: 0; content: ""; pointer-events: none; z-index: -1;
+      background-image:
+        radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.8) 50%, transparent 100%),
+        radial-gradient(1px 1px at 76% 13%, rgba(216,194,255,.8) 50%, transparent 100%),
+        radial-gradient(2px 2px at 54% 44%, rgba(255,255,255,.65) 50%, transparent 100%),
+        radial-gradient(1px 1px at 88% 71%, rgba(216,194,255,.75) 50%, transparent 100%),
+        radial-gradient(1px 1px at 27% 82%, rgba(255,255,255,.6) 50%, transparent 100%);
+      background-size: 360px 320px;
+      animation: drift 32s linear infinite;
+      opacity: .55;
+    }
+    .stars::before { transform: translateY(-20px); opacity: .35; background-size: 240px 260px; animation-duration: 45s; }
+    .stars::after { transform: translateY(15px); opacity: .25; background-size: 430px 380px; animation-duration: 60s; }
+    @keyframes drift { from { background-position: 0 0; } to { background-position: 180px 320px; } }
+    .wrap { width: min(880px, calc(100% - 32px)); margin: 0 auto; padding: 44px 0 56px; }
+    header { text-align: center; margin-bottom: 28px; animation: appear .7s ease both; }
+    .orb {
+      display: grid; place-items: center; width: 64px; height: 64px; margin: 0 auto 18px;
+      border: 1px solid rgba(208, 178, 255, .5); border-radius: 22px;
+      background: linear-gradient(145deg, rgba(174, 124, 255, .25), rgba(58, 35, 94, .45));
+      box-shadow: 0 0 35px rgba(157, 95, 255, .22), inset 0 0 18px rgba(202, 170, 255, .08);
+      font-size: 28px;
+    }
+    .eyebrow { color: var(--purple-bright); text-transform: uppercase; letter-spacing: .2em; font-size: .72rem; font-weight: 750; }
+    h1 { margin: 8px 0 4px; font-size: clamp(2rem, 7vw, 3.35rem); line-height: 1.12; letter-spacing: -.045em; }
+    h1 span { color: var(--purple-bright); text-shadow: 0 0 28px rgba(183, 140, 255, .3); }
+    .subtitle { margin: 10px 0 0; color: var(--muted); font-size: .96rem; }
+    .document {
+      padding: clamp(22px, 5vw, 42px); border: 1px solid var(--panel-border); border-radius: 24px;
+      background: var(--panel); box-shadow: 0 22px 80px rgba(0,0,0,.25);
+      backdrop-filter: blur(12px); animation: appear .85s .08s ease both;
+    }
+    .notice {
+      padding: 14px 16px; margin: 0 0 24px; border: 1px solid rgba(183,140,255,.22);
+      border-left: 3px solid var(--purple); border-radius: 12px; background: rgba(146, 94, 220, .08);
+      color: #e6d9ff; font-size: .92rem;
+    }
+    section { padding: 20px 0; border-bottom: 1px solid var(--line); }
+    section:first-of-type { padding-top: 0; }
+    section:last-of-type { border-bottom: 0; padding-bottom: 0; }
+    h2 { display: flex; align-items: baseline; gap: 12px; margin: 0 0 9px; font-size: 1.12rem; letter-spacing: -.015em; }
+    .num { color: var(--purple); font-size: .8rem; font-weight: 800; letter-spacing: .08em; }
+    p { margin: 0; color: #d4cbe2; }
+    p + p { margin-top: 10px; }
+    a { color: var(--purple-bright); text-underline-offset: 3px; }
+    footer { text-align: center; padding: 22px 8px 0; color: #8f829f; font-size: .8rem; }
+    .top-link { display: inline-block; margin-top: 12px; text-decoration: none; border: 1px solid var(--panel-border); padding: 7px 13px; border-radius: 999px; }
+    @keyframes appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="stars" aria-hidden="true"></div>
+  <main class="wrap">
+    <header>
+      <div class="orb" aria-hidden="true">✦</div>
+      <div class="eyebrow">PixelVault · Legal</div>
+      <h1>Terms of <span>Service</span></h1>
+      <p class="subtitle">The terms for using the PixelVault Discord bot and its features.</p>
+    </header>
+
+    <article class="document">
+      <div class="notice"><strong>Please read:</strong> By using PixelVault, you agree to these Terms of Service. If you do not agree, stop using the bot.</div>
+
+      <section>
+        <h2><span class="num">01</span> Acceptance of Terms</h2>
+        <p>These Terms of Service apply to your use of PixelVault and its related features. By using PixelVault, you agree to these terms and to follow Discord’s Terms of Service and Community Guidelines.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">02</span> Acceptable Use</h2>
+        <p>You must not use PixelVault to harass or harm others, spam, break applicable laws or platform rules, exploit bugs, interfere with the service, or bypass intended limits and safeguards. You are responsible for your use of the bot and for following the rules of the Discord servers where you use it.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">03</span> Features and Virtual Economy</h2>
+        <p>PixelVault may offer utility, entertainment, economy, virtual balances, items, or other features. Unless clearly stated otherwise, virtual balances, items, and statistics have no real-world cash value and cannot be exchanged for real money. Features, balances, and availability may be adjusted, reset, or discontinued.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">04</span> Data and Privacy</h2>
+        <p>PixelVault may process information needed to provide its commands and features, such as Discord user or server identifiers and feature-related settings or statistics. The exact information processed depends on the features enabled. Do not send passwords, payment information, or other sensitive personal information through the bot.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">05</span> Availability and Enforcement</h2>
+        <p>PixelVault is provided on an “as available” basis. We cannot guarantee uninterrupted service, error-free operation, or permanent storage of data. Access may be limited or suspended when these terms are violated or when necessary to protect the service.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">06</span> Disclaimer</h2>
+        <p>To the extent permitted by applicable law, PixelVault is provided without guarantees or warranties. Nothing in these terms removes rights that cannot legally be excluded.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">07</span> Changes to These Terms</h2>
+        <p>These terms may be updated as PixelVault changes. The updated version will be posted on this page. If you continue using PixelVault after an update takes effect, you agree to the revised terms.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">08</span> Contact and Support</h2>
+        <p>For help or questions about these terms, contact the PixelVault team through its official support server or the support channel where PixelVault is maintained.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">09</span> Independent Service</h2>
+        <p>PixelVault is an independent service and is not affiliated with, endorsed by, or sponsored by Discord Inc.</p>
+      </section>
+    </article>
+
+    <footer>
+      <div>© PixelVault · Terms of Service</div>
+      <a class="top-link" href="#top">↑ Back to top</a>
+    </footer>
+  </main>
+</body>
+</html>
